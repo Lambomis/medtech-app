@@ -1,0 +1,72 @@
+:root {
+    --maxw: 360px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    margin: 24px;
+    color: #111;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 12px
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center
+}
+
+.file-label input {
+    display: inline-block
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #666;
+    background: #fff;
+    cursor: pointer
+}
+
+.status {
+    margin-left: 8px
+}
+
+.images {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: flex-start
+}
+
+.images figure {
+    margin: 0;
+    text-align: center
+}
+
+.images img {
+    max-width: var(--maxw);
+    max-height: 480px;
+    border-radius: 8px;
+    border: 1px solid #ddd
+}
+
+@media (max-width:720px) {
+    .images {
+        flex-direction: column;
+        align-items: center
+    }
+}
