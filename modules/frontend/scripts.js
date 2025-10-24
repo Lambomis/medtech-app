@@ -1,6 +1,3 @@
-// const API_URL = "https://YOUR-HF-SPACE-URL.hf.space/process";
-const API_URL = "http://127.0.0.1:8000/process";
-
 const fileInput = document.getElementById('imageInput');
 const processBtn = document.getElementById('processBtn');
 const originalImg = document.getElementById('original');
@@ -29,6 +26,11 @@ function getSelectedPhase() {
 processBtn.addEventListener('click', async () => {
     if (!fileInput.files[0]) {
         alert("Carica prima un'immagine.");
+        return;
+    }
+
+    if (!API_URL) {
+        alert("Backend non configurato correttamente.");
         return;
     }
 
@@ -74,4 +76,5 @@ processBtn.addEventListener('click', async () => {
         processBtn.disabled = false;
     }
 });
+
 
